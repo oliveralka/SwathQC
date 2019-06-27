@@ -1,0 +1,1 @@
+''' plot any var_score as scatter, line or histogram'''

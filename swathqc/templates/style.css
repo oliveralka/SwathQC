@@ -1,0 +1,203 @@
+body{
+    background-color: lightgrey;
+    color: #000305;
+    font-family: Verdana, sans-serif;
+    text-align: justify;
+	font-size: 12px;
+	line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin:  1em 2em 0em 2em;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #063a5e;
+	padding: 1em 2em;
+	border: 5px solid white;
+}
+
+h2 {
+    color: #063a5e;
+    border-bottom: 5px solid #063a5e;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1.5em;
+    }
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+p.missing{
+    color:Red;
+    font-size: 16px;
+    text-align: center;}
+span {
+    font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
+}
+
+.wrapper {
+	margin: 0em 2em 1em 2em;
+    border: 5px solid white;
+    float:left;
+}
+
+
+#navbar {
+  background-color: lightgrey;
+    padding-left:2em;
+    padding-right: 2em;
+    overflow: hidden;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+#navbar a:hover {
+  background-color: grey;
+  color: black;
+} 
+#navbar .sticky a:active {
+  background-color: grey;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+    width: 100%;
+}
+
+:target{
+  padding-top:70px; /* = to height of navbar */
+  margin-top:-70px;
+}
+
+section {
+    padding: 1em 1em 2em 1em;
+    overflow: hidden;
+    float:left;
+    min-width: 98%;
+    top: -60px;
+}
+
+section .img_description {
+    float:left;
+    width:30%;
+    margin-right: 2em;
+    overflow: hidden}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+
+.img_container {
+    float: left;
+    width: 65%;
+    margin-left: 2em;
+    margin-top: 40px;
+    top: 1em;
+    background-color:white;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+rect {
+    fill: grey;
+  }
+
+rect:hover {
+    fill: #F56C4E;
+  }
+/* Style the Image Used to Trigger the Modal */
+/* #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+*/
+
+
+/* css for enlarginf images in modal box*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  /*max-width: 1000px;*/
+}
+.modal-content:hover {
+    opacity: 1;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}

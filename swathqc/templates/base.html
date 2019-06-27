@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SwathQC</title>
+    <meta charset="utf-8">
+    <link href="templates/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        {% include 'style.css' %}
+    </style>
+
+</head>
+<body>
+<header>
+    {% if title %}
+    <h1>{{ title }}</h1>
+    {% else %}
+	<h1>SWATH-QC Report</h1>
+    {% endif %}
+</header>
+        <nav id="navbar">
+            {% for h, c in navigation %}
+            <a href="#{{h}}">{{c}}</a>
+            {% endfor %}
+    </nav>
+
+<div class ="wrapper">
+
+{% for section in sections %}
+
+
+
+{# Top section with summary tables #}
+
+    {% if section.name == 'top' %}
+    <section id="{{ section.name }}">
+        {% for p, tab in section.table %}
+            <div class="table" style="overflow-x:auto;"> <h4>{{ p }}</h4>
+                {{ tab }}
+            </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+{# section for ID over RT, multiple figures possible#}
+
+    {% if section.name == 'idoverrt' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>ID over RT</h2>
+            <p>Plots the number of features identified in each retention time interval. Each bar represents a 5 minute RT interval.
+                Subplots are generated from any given swath (blue) and pyprophet (coral) or TRIC (orange) input files.
+                Please compare runs and make sure, the number of Feature IDs are stable over RT dimension and between runs.</p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+{# section for PeakWidth over RT, multiple figures possible#}
+    {% if section.name == 'pwoverrt' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>PeakWidth over RT</h2>
+            <p>Peak Width over RT detects LC performance. Narrow peaks mean better chromatographic resolution.
+                An increase in median peak width over time means peaks are getting wider.
+                An increased number of spectra should manifest itself in a broader boxplot, but medians should remain stable.
+                <br>
+                Peak With is plotted here in boxplots in 5 minute intervals over the span of the retention time.
+                The Peak Width metric used here is  calculated as the difference between left with and right width of the chromatographic peak.
+                As an alternative FWHM could be considered.
+                <br>
+                Peak Width can be plotted from OpenSwathWorkflow output (osw, tsv) or Pyprophet Files (osw, tsv).
+                Column names used for plotting differ between tsv
+                ( 'RT', 'rightWidth' and 'leftWidth) and osw ('EXP\_RT', 'RIGHT\_WIDTH' and 'LEFT\_WIDTH').
+            </p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+{# section for number of transitions per peature, multiple figures possible#}
+    {% if section.name == 'numtrans' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>Number of Transitions</h2>
+            <p>The library contains 6 transitions for each feature.
+                For each feature, the number of recovered transitions are counted from the column
+            'aggr_peak_area' in tsv files and and 'AREA_INTENSITY' from the FEATURE_TRANSITION_TABLE in osw files.
+           Only non zero area intensities will be counted.
+           Files from pyprophet or TRIC contains all features and transitions from merged swath files, so the total
+           number will be much higher. But the number of features with only 1 - 3 transitions should go down considerably,
+           as these low quality features get filtered out.</p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+{# section for missed Cleavages, multiple figures possible, but only plots from openswath tsv#}
+    {% if section.name == 'mc' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>Missed Cleavages</h2>
+            <p>Missed Cleavages are calculated by OpenSwathWorkflow, by doing an in situ digest (assuming Trypsin)
+                and the number of missed cleavages for each peptide is placed in a column 'MC'.
+                A histogram plot of missed cleavages conveys an impression of the quality of sample preparation.
+                For that all peptides tagged as decoy are dropped  before plotting and transitions groups are grouped
+                so that each peptide is counted only once.
+                <br>Missed cleavages are only available from tsv output of OpenSwathWorkflow, not to the osw files in the SQlite based workflow.
+            </p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+{# section for masserrors, multiple figures possible, but only plots from openswath tsv#}
+    {% if section.name == 'masserror' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>Mass Errors</h2>
+            <p>The mass error or (mass accuracy) describes the difference between the measured m/z of and ion and the
+                real m/z, that is calculated for the identified ion and reported in part per million (ppm).
+                It reports on the quality of a mass spectrometry run and its identifications (IDs).
+                Since ID depends on adjustable parameters, the spread of mass error should reflect the user parameters.
+                The mean of the distribution should lie around 0, else it may indicate instrument bias.
+                <br>
+                The distribution of mass errors is plotted in a histogram.
+                Since each ID has multiple MS2 peaks, where each peak has a mass error attached,
+                the mean is calculated for each MS2 spectrum before plotting.
+                <br>
+                This plot is currently only available from OpenSwathWorkflow tsv, because the information is not yet included in the osw file. </p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+{# section for missed Cleavages, multiple figures possible, but only plots from openswath tsv#}
+    {% if section.name == 'rtcorrlib' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>RT correlation with library</h2>
+            <br>Scatter plot of RT against the RT difference between (normalized) library retention time and the  DIA runs (normalized) retention time.
+                <br>QC target: LC performance.
+                <br>Ideally RT difference remains around 0, there is a +/- 5 minute tolerance interval that is considered acceptable
+                The default RT window width in OpenSwathWorkflow is +/- 5 minutes (or 600s).
+                If it seems to run out of the frame, might be an indication to increase the parameter (\texttt{-rt\_extraction\_window}) in OpenSwathWorkflow.
+                <br> RT correlation is plotted from PyProphets export tsv file.
+            A scatter plot is produced of normalized 'iRT' against 'delta_iRT' if available, else 'RT' against 'delta\_rt'. And only targets are considered.
+Because this file may contain IDs from multiple runs, the mean is calculated for each identified peptide before plotting.
+            </p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+{# section for library intensity correlation multiple figures possible, but only plots from openswath tsv#}
+    {% if section.name == 'libintcorr' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>Intensity Correlation with Library</h2>
+            <p>The correlation of assay library (DDA) intensity with DIA intensity is calculated by OpenSwathWorkflow
+                as one of many sub-scores, that describe describe the peak group. This score is plotted here as boxplot
+                for each file</p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+{# section for library coverage, multiple figures possible, but only plots from openswath tsv #}
+    {% if section.name == 'libcov' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>Library Coverage</h2>
+            <p>This plot is only available in the report when the assay library is provided.
+                It is plotted after FDR control from PyProphet  tsv.
+                A venn digram illustrates how much of the peptides the assay library were recovered from
+                DIA data on the peptide level.</p>
+        </div>
+        <div class="img_container">{% for img in section.images %}{{ img }}{% endfor %}</div>
+    </section>
+    {% endif %}
+
+
+{# section for rt correlation, only from pp #}
+    {% if section.name == 'rtcorr' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>RT correlation with Assay library</h2>
+            <p>add description </p>
+        </div>
+        <div class="img_container">{{ section.images }}</div>
+    </section>
+    {% endif %}
+
+
+{# section for pyprophet scores , only from pp #}
+    {% if section.name == 'dscores' %}
+    <section id="{{ section.name }}">
+        <div class="img_description"><h2>Pyprophet d-scores</h2>
+            <p>PyProphet uses the scores from OpenSwathWorkflow to calculate a discriminant score (d-score) separating
+                targets from decoys. They are plotted in the report as density plots.
+                <br>
+                These plots together with additional plots are also available in the pdf reports created by PyProphet.
+                They were added to the SWATH-QQ report in the spirit of getting a quick overview.  </p>
+        </div>
+        <div class="img_container">{{ section.images }}</div>
+    </section>
+    {% endif %}
+
+
+    {% endfor %}
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text)
+  <div id="caption"></div> -->
+</div>
+<script>{% include 'script.js' %}</script>
+
+
+</div>
+</body>
+</html>
