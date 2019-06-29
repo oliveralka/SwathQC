@@ -1,4 +1,5 @@
 import setuptools
+import numpy
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -12,6 +13,7 @@ setuptools.setup(
     long_description=open('README.md').read(),
     url="https://github.com/somnja/SwathQC.git",
     packages=setuptools.find_packages(),
+    include_dirs=[numpy.get_include()],
     install_requires=['numpy', 'pandas',
                       'matplotlib', 'matplotlib-venn',
                       'jinja2'],
