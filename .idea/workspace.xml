@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98cb4b2d-7531-45ed-8ab1-8b612ffd4edf" name="Default Changelist" comment="" />
+    <list default="true" id="98cb4b2d-7531-45ed-8ab1-8b612ffd4edf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    </list>
     <ignored path="swathqc/testfiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,14 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47603834">
+    <splitter split-orientation="horizontal" split-proportion="0.75849056">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/swathqc/swathqc_report.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="111">
-                  <caret line="95" column="68" selection-start-line="95" selection-start-column="68" selection-end-line="95" selection-end-column="68" />
+                <state relative-caret-position="273">
+                  <caret line="163" column="75" selection-start-line="163" selection-start-column="75" selection-end-line="163" selection-end-column="84" />
                   <folding>
                     <element signature="e#65#102#0" expanded="true" />
                   </folding>
@@ -25,22 +28,22 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/swathqc/templates/base.j2">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3281">
-                  <caret line="193" column="103" selection-start-line="193" selection-start-column="103" selection-end-line="193" selection-end-column="103" />
+                <state relative-caret-position="241">
+                  <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/swathqc/__init__.py">
+            <entry file="file://$PROJECT_DIR$/swathqc/metrics/numOfTransitionsPerFeature.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="29" column="123" selection-start-line="29" selection-start-column="123" selection-end-line="29" selection-end-column="123" />
+                <state relative-caret-position="249">
+                  <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
                   <folding>
-                    <element signature="e#41#317#0" expanded="true" />
+                    <element signature="e#0#11#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -58,7 +61,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/swathqc/metrics/pyprophetScores.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2023">
+                <state relative-caret-position="1777">
                   <caret line="121" column="52" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
@@ -86,7 +89,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/swathqc/metrics/idOverRt.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1445">
+                <state relative-caret-position="887">
                   <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
@@ -95,20 +98,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/swathqc/utils/handleOSW.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="12" />
+                <state relative-caret-position="252">
+                  <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/swathqc/metrics/libraryCoverage.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+                <state relative-caret-position="272">
+                  <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
                   <folding>
                     <element signature="e#79#117#0" expanded="true" />
                   </folding>
@@ -154,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/scripts/swathqc.py" />
@@ -181,7 +183,6 @@
         <option value="$PROJECT_DIR$/swathqc/templates/style.css" />
         <option value="$PROJECT_DIR$/swathqc/metrics/massError.py" />
         <option value="$PROJECT_DIR$/swathqc/metrics/missedCleavages.py" />
-        <option value="$PROJECT_DIR$/swathqc/metrics/numOfTransitionsPerFeature.py" />
         <option value="$PROJECT_DIR$/swathqc/metrics/pyprophetScores.py" />
         <option value="$PROJECT_DIR$/swathqc/metrics/idOverRt.py" />
         <option value="$PROJECT_DIR$/swathqc/metrics/libraryIntensityCorrelation.py" />
@@ -199,13 +200,15 @@
         <option value="$PROJECT_DIR$/swathqc/utils/fileSummary.py" />
         <option value="$PROJECT_DIR$/swathqc/utils/fileSummary.py" />
         <option value="$PROJECT_DIR$/swathqc/swathqc_report.py" />
+        <option value="$PROJECT_DIR$/swathqc/metrics/numOfTransitionsPerFeature.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="339" />
-    <option name="y" value="-17" />
-    <option name="width" value="1382" />
+    <option name="x" value="276" />
+    <option name="y" value="180" />
+    <option name="width" value="899" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -214,6 +217,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,7 +252,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,7 +290,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/swathqc/swathqc_report.py" />
-      <option name="PARAMETERS" value="-t &quot;C:\Users\Admin\Documents\MasterThesis\datasets\gillet\w32ifxLibrary\aligned.tsv&quot; -s &quot;C:\Users\Admin\Documents\MasterThesis\datasets\gillet\w32ifxLibrary\HYE124_TTOF6600_32fix_002-1-SW32-Repl1.mzML.osw&quot; -ppdscores &quot;C:\Users\Admin\Documents\MasterThesis\datasets\gillet\w32ifxLibrary\merged.osw&quot; -p &quot;C:\Users\Admin\Documents\MasterThesis\datasets\gillet\w32ifxLibrary\merged_export.tsv&quot; -l &quot;C:\Users\Admin\Documents\MasterThesis\SWATH_libraries\HYE124\fix32\library_ecolihumanyeast_fix32.pqp&quot; -o &quot;C:\Users\Admin\Documents\MasterThesis\datasets\gillet\w32ifxLibrary\report_w32fix.html&quot; -title TTOF_w32fix" />
+      <option name="PARAMETERS" value="-t &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\aligned_fix.tsv&quot; &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\aligned_step.tsv&quot; -s &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\FKL2872-S02-A-A_DIA_stepCE_1.osw&quot; &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\FKL2872-S04-A-A_DIA_fixCE_1.osw&quot; -ppdscores &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\merged_fix.osw&quot; &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\merged_step.osw&quot; -p &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\merged_fix_export.tsv&quot; &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\merged_step_export.tsv&quot; -o &quot;C:\Users\Admin\Documents\MasterThesis\datasets\FKL2872\profile\rt_extraction1200\report2_rt_extraction_step_fix.html&quot; -title &quot;QEx A rt1200&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -375,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561563766804</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed colors in numbers of transitions">
+      <created>1561812777316</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561812777317</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -388,21 +398,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="701" y="41" width="899" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.19794345" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14421931" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" weight="0.37415883" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49821216" visible="true" weight="0.33224222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32974428" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4993573" weight="0.32974428" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993573" weight="0.32974428" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.50064266" side_tool="true" visible="true" weight="0.37415883" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50178784" side_tool="true" visible="true" weight="0.33224222" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -435,7 +446,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial upload" />
     <MESSAGE value="delete testfile: too large" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete testfile: too large" />
+    <MESSAGE value="fixed colors in numbers of transitions" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed colors in numbers of transitions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -466,13 +478,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/swathqc.py" />
     <entry file="file://$PROJECT_DIR$/swathqc/run_swathqc_report.py" />
     <entry file="file://$PROJECT_DIR$/swathqc/utils/__init__.py">
@@ -596,32 +601,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swathqc/metrics/numOfTransitionsPerFeature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="104" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swathqc/metrics/rtCorrWithLib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swathqc/swathqc_report.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="95" column="68" selection-start-line="95" selection-start-column="68" selection-end-line="95" selection-end-column="68" />
-          <folding>
-            <element signature="e#65#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -650,16 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swathqc/metrics/pyprophetScores.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="121" column="52" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swathqc/metrics/peakWidthOverRt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -667,23 +642,6 @@
           <folding>
             <element signature="e#165#176#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swathqc/metrics/idOverRt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swathqc/utils/handleOSW.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -699,11 +657,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swathqc/metrics/libraryCoverage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="272">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
           <folding>
             <element signature="e#79#117#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swathqc/metrics/pyprophetScores.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1777">
+          <caret line="121" column="52" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swathqc/metrics/numOfTransitionsPerFeature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swathqc/metrics/idOverRt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="887">
+          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swathqc/utils/handleOSW.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swathqc/swathqc_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="163" column="75" selection-start-line="163" selection-start-column="75" selection-end-line="163" selection-end-column="84" />
+          <folding>
+            <element signature="e#65#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
