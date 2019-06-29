@@ -49,7 +49,18 @@ def num_transitions(df, title='Num of Transitions/Feature', color='coral', figsi
     # copy df before plotting!
 
     temp_df = df.copy()
-    num_transitions_subplot(ax, temp_df, title, color)
+    if 'aggr_Peak_Area' in temp_df.columns:
+        temp_df['peak_count'] = temp_df['aggr_Peak_Area'].apply(lambda x: num_peaks(x))
+        to_plot = temp_df[temp_df['decoy'] == 0].groupby('peak_count').count().reset_index().rename(
+            columns={'transition_group_id': 'number of available peaks'})
+    if "FEATURE_ID" in temp_df.columns:
+        # from FEATURE_TRANSITION table
+        # either APEX_INTENSITY or AREA_INTENSITY
+        to_plot = temp_df[temp_df.APEX_INTENSITY != 0.0].groupby('FEATURE_ID').count().groupby(
+            'TRANSITION_ID').count().reset_index().rename(
+            columns={'TRANSITION_ID': 'peak_count', 'AREA_INTENSITY': 'number of available peaks'})
+
+    num_transitions_subplot(ax, to_plot, title, color)
     fig.tight_layout()
     return fig
 

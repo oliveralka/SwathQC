@@ -161,7 +161,7 @@ def main():
                                        #input_files_summary_table(dfdict))
                                        ]),
                 prepare_section('idoverrt', header="ID over RT",
-                                images=[report_id_over_rt(swathDict), report_id_over_rt(ppDict),
+                                images=[report_id_over_rt(swathDict, color="#3A78A4"), report_id_over_rt(ppDict),
                                         report_id_over_rt(tricDict, color="#FFB350")]),
                 prepare_section('numtrans', header='#Transitions',
                                 images=[report_num_transitions(swathDict, color="#3A78A4"),  #
