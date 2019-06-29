@@ -1,5 +1,6 @@
 # imports from subpackages and modules
-
+from .utils import *
+from .metrics import *
 
 from swathqc.utils.fileSummary import num_of_peptides, file_summary_by_species, library_summary_by_species, \
     library_summary_tsv, file_summary, num_of_proteins_group, num_of_transitions, num_of_proteins, num_of_precursors, \
