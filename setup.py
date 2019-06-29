@@ -11,7 +11,7 @@ setuptools.setup(
     description="QC metrics for DIA SWATH data",
     long_description=open('README.md').read(),
     url="https://github.com/somnja/SwathQC.git",
-    packages=['swathqc'],
+    packages=setuptools.find_packages(),
     install_requires=['numpy', 'pandas',
                       'matplotlib', 'matplotlib-venn',
                       'jinja2'],
