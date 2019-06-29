@@ -9,7 +9,7 @@ setuptools.setup(
     author="Sonja Wende",
     author_email="somnja@gmail.com",
     description="QC metrics for DIA SWATH data",
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     url="https://github.com/somnja/SwathQC.git",
     packages=['swathqc'],
     install_requires=['numpy', 'pandas',
