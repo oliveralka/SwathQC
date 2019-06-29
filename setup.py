@@ -13,7 +13,7 @@ setuptools.setup(
     url="https://github.com/somnja/SwathQC.git",
     packages=['swathqc'],
     install_requires=['numpy', 'pandas',
-                      'matplotlib', 'matplotlib-venn'
+                      'matplotlib', 'matplotlib-venn',
                       'jinja2'],
     classifiers=[
         "Programming Language :: Python :: 3",
